@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nazar Khalid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" class="underline">Home</a>
+        <a href="research.html">Research</a>
+        <a href="public-writings.html">Public Writings</a>
+        <a href="cv.html">CV</a>
+        <a href="media.html">Media & Outreach</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="research.html" class="mobile-link">Research</a>
+        <a href="public-writings.html" class="mobile-link">Public Writings</a>
+        <a href="cv.html" class="mobile-link">CV</a>
+        <a href="media.html" class="mobile-link">Media & Outreach</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <section class="grid md:grid-cols-3 gap-8 items-center">
+
+      <!-- LEFT: text content -->
+      <div class="col-span-2">
+
+        <!-- bold intro line required -->
+        <p class="mt-4 text-gray-800"><strong>Hi, I'm Nazar Khalid</strong></p>
+
+        <!-- Inserted paragraphs exactly as provided -->
+        <p class="mt-4 text-gray-700">
+          I am a Ph.D. candidate in Demography and Sociology at the University of Pennsylvania, where I study how structural inequalities shape life outcomes in marginalized communities. My research examines how caste, class, and gender hierarchies intersect with environmental disruptions, social policies, and cultural norms to affect education, health, and wellbeing in India.
+        </p>
+
+        <p class="mt-4 text-gray-700">
+          My work investigates three interconnected research questions. First, I examine how environmental shocks function as stratification mechanisms, analyzing how floods disproportionately affect lower-caste, poorer, and female-headed households, and how this differential exposure drives educational and health inequalities. Second, I study how caste and gender discrimination shapes mental health and family wellbeing, investigating which inequalities are preventable and which reflect deeply entrenched social organization. Third, I analyze the unintended consequences of social policies and technologies, examining how programs like Aadhaar-based biometric authentication and clean energy subsidies interact with existing inequalities to create new forms of exclusion or opportunity.
+        </p>
+
+        <p class="mt-4 text-gray-700">
+          My work draws on population-representative surveys, longitudinal data, and field research to understand how inequality is produced and reproduced. I use quantitative methods—including geospatial analysis, panel data techniques, and data linkage across survey and satellite sources—to examine questions about differential exposure, vulnerability, and access to opportunities. My research also incorporates qualitative approaches, including fieldwork and in-depth interviews, to understand the lived experiences behind statistical patterns.
+        </p>
+
+        <p class="mt-4 text-gray-700">
+          My research has been published in RSF: The Russell Sage Foundation Journal of the Social Sciences, Economics of Education Review, World Development, PLOS ONE, Health Policy and Planning, and Economic and Political Weekly.
+        </p>
+
+        <p class="mt-4 text-gray-700">
+          I was awarded the University of Pennsylvania Inaugural Presidential Fellowship (2021-2024). My research has been published in RSF: The Russell Sage Foundation Journal of the Social Sciences, Economics of Education Review, World Development, PLOS ONE, Health Policy and Planning, and Economic and Political Weekly, among others.
+        </p>
+
+        <!-- QUICK LINKS: only CV as requested -->
+        <div class="mt-8">
+          <a href="cv.html" class="inline-block px-4 py-2 border rounded bg-gray-50 hover:bg-gray-100">View CV</a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: profile pic (kept only here) -->
+      <div class="flex items-start justify-center">
+        <!-- keep head uncropped: object-contain and circular container -->
+        <div class="w-44 h-44 rounded-full border p-2 bg-white flex items-center justify-center">
+          <img src="profile.jpg" alt="Nazar Khalid" class="w-full h-full rounded-full object-contain">
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST / panels (optional, left below) -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold">Latest</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        <div class="p-4 border rounded-lg">
+          <h3 class="font-semibold">Floods, community infrastructure, and children’s learning losses in rural India</h3>
+          <p class="text-sm text-gray-600 mt-1">Economics of Education Review (2025) — <a href="https://www.sciencedirect.com/science/article/pii/S0272775725000159" class="underline">Read paper</a></p>
+        </div>
+
+        <div class="p-4 border rounded-lg">
+          <h3 class="font-semibold">Disrespectful Maternity Care: Labour Room Violence</h3>
+          <p class="text-sm text-gray-600 mt-1">The India Forum (2022) — <a href="https://www.theindiaforum.in/article/disrespectful-maternity-care-labour-room-violence-government-health-facilities" class="underline">Read article</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mt-12 py-8 border-t">
+    <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
+      © <span id="year-home"></span> Nazar Khalid.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-home').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn'), mobile = document.getElementById('mobileMenu');
+    if (btn) btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobile.classList.add('hidden')));
+  </script>
+
+</body>
+</html>

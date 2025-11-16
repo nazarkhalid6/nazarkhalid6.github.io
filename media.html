@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Media & Outreach — Nazar Khalid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" data-nav="/index.html">Home</a>
+        <a href="research.html" data-nav="/research.html">Research</a>
+        <a href="public-writings.html" data-nav="/public-writings.html">Public Writings</a>
+        <a href="cv.html" data-nav="/cv.html">CV</a>
+        <a href="media.html" data-nav="/media.html" class="underline font-semibold">Media & Outreach</a>
+        <a href="contact.html" data-nav="/contact.html">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden p-2 border rounded">☰</button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="research.html" class="mobile-link">Research</a>
+        <a href="public-writings.html" class="mobile-link">Public Writings</a>
+        <a href="cv.html" class="mobile-link">CV</a>
+        <a href="media.html" class="mobile-link">Media & Outreach</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-semibold">Media Coverage & Outreach</h1>
+    <p class="text-gray-600 mt-2">Selected press mentions, interviews, podcasts and technical outreach.</p>
+
+    <!-- Grid of logos (upload files in /images with exact names) -->
+    <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      <!-- Each card: upload media-*.png images to /images -->
+      <a href="https://www.dw.com" class="border p-4 rounded hover:shadow" target="_blank">
+        <img src="images/media-dw.png" alt="Deutsche Welle logo" class="w-full h-16 object-contain">
+        <p class="mt-2 text-center text-sm">Deutsche Welle</p>
+      </a>
+
+      <a href="https://www.hindustantimes.com" class="border p-4 rounded hover:shadow" target="_blank">
+        <img src="images/media-ht.png" alt="Hindustan Times logo" class="w-full h-16 object-contain">
+        <p class="mt-2 text-center text-sm">Hindustan Times</p>
+      </a>
+
+      <a href="https://www.thehindu.com" class="border p-4 rounded hover:shadow" target="_blank">
+        <img src="images/media-thehindu.png" alt="The Hindu logo" class="w-full h-16 object-contain">
+        <p class="mt-2 text-center text-sm">The Hindu</p>
+      </a>
+
+      <a href="https://www.livemint.com" class="border p-4 rounded hover:shadow" target="_blank">
+        <img src="images/media-livemint.png" alt="LiveMint logo" class="w-full h-16 object-contain">
+        <p class="mt-2 text-center text-sm">LiveMint</p>
+      </a>
+
+      <a href="https://www.thewire.in" class="border p-4 rounded hover:shadow" target="_blank">
+        <img src="images/media-wire.png" alt="The Wire logo" class="w-full h-16 object-contain">
+        <p class="mt-2 text-center text-sm">The Wire</p>
+      </a>
+
+      <a href="https://scroll.in" class="border p-4 rounded hover:shadow" target="_blank">
+        <img src="images/media-scroll.png" alt="Scroll logo" class="w-full h-16 object-contain">
+        <p class="mt-2 text-center text-sm">Scroll</p>
+      </a>
+
+      <a href="https://www.business-standard.com" class="border p-4 rounded hover:shadow" target="_blank">
+        <img src="images/media-bs.png" alt="Business Standard logo" class="w-full h-16 object-contain">
+        <p class="mt-2 text-center text-sm">Business Standard</p>
+      </a>
+
+      <a href="https://www.indiatoday.in" class="border p-4 rounded hover:shadow" target="_blank">
+        <img src="images/media-india.png" alt="India Today / Times logo" class="w-full h-16 object-contain">
+        <p class="mt-2 text-center text-sm">India Today / Times</p>
+      </a>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold">Talks & Presentations</h2>
+      <ul class="mt-3 list-disc pl-5 text-gray-700 space-y-2">
+        <li>Population Association of America — Floods & Learning (April 2025)</li>
+        <li>RC28 Spring Meeting, Shanghai — Floods & Learning (May 2024)</li>
+        <li>Comparative and International Education Society — Floods & Learning (Mar 2024)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="mt-12 py-8 border-t">
+    <div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year-m"></span> Nazar Khalid.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year-m').textContent=new Date().getFullYear();
+    const btn=document.getElementById('menuBtn'), mobile=document.getElementById('mobileMenu');
+    if(btn){ btn.addEventListener('click',()=>mobile.classList.toggle('hidden')); }
+    document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>mobile.classList.add('hidden')));
+    document.querySelectorAll('nav a[data-nav]').forEach(a=>{ if(location.pathname.toLowerCase().endsWith(a.getAttribute('data-nav'))) a.classList.add('underline'); });
+  </script>
+</body>
+</html>

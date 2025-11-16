@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact — Nazar Khalid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" data-nav="/index.html">Home</a>
+        <a href="research.html" data-nav="/research.html">Research</a>
+        <a href="public-writings.html" data-nav="/public-writings.html">Public Writings</a>
+        <a href="cv.html" data-nav="/cv.html">CV</a>
+        <a href="media.html" data-nav="/media.html">Media & Outreach</a>
+        <a href="contact.html" data-nav="/contact.html" class="underline font-semibold">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden p-2 border rounded">☰</button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="research.html" class="mobile-link">Research</a>
+        <a href="public-writings.html" class="mobile-link">Public Writings</a>
+        <a href="cv.html" class="mobile-link">CV</a>
+        <a href="media.html" class="mobile-link">Media & Outreach</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-semibold">Get in touch</h1>
+    <p class="text-gray-600 mt-2">Email is best for academic & media enquiries.</p>
+
+    <div class="mt-8 grid md:grid-cols-2 gap-8">
+      <div class="p-6 border rounded">
+        <h3 class="font-semibold">Email</h3>
+        <p class="mt-2 text-gray-700"><a href="mailto:nazark@sas.upenn.edu" class="underline">nazark@sas.upenn.edu</a></p>
+
+        <h3 class="font-semibold mt-6">Office</h3>
+        <p class="mt-2 text-gray-700">Population Studies Center, University of Pennsylvania<br>133 South 36th Street, Philadelphia, PA 19104</p>
+      </div>
+
+      <div class="p-6 border rounded">
+        <h3 class="font-semibold">Social / Profiles</h3>
+        <ul class="mt-2 list-disc pl-5 text-gray-700 space-y-2">
+          <li><a href="https://scholar.google.com/citations?user=sXtOs2sAAAAJ" class="underline" target="_blank">Google Scholar</a></li>
+          <li><a href="https://www.pop.upenn.edu/bio/nazar-khalid" class="underline" target="_blank">UPenn profile</a></li>
+        </ul>
+
+        <h3 class="font-semibold mt-6">Media enquiries</h3>
+        <p class="mt-2 text-gray-700">Please email nazark@sas.upenn.edu with subject line: <em>Media enquiry — [outlet]</em></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-12 py-8 border-t"><div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year-c"></span> Nazar Khalid.</div></footer>
+
+  <script>
+    document.getElementById('year-c').textContent=new Date().getFullYear();
+    const btn=document.getElementById('menuBtn'), mobile=document.getElementById('mobileMenu');
+    if(btn){ btn.addEventListener('click',()=>mobile.classList.toggle('hidden')); }
+    document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>mobile.classList.add('hidden')));
+    document.querySelectorAll('nav a[data-nav]').forEach(a=>{ if(location.pathname.toLowerCase().endsWith(a.getAttribute('data-nav'))) a.classList.add('underline'); });
+  </script>
+</body>
+</html>
