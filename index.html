@@ -43,15 +43,26 @@
 
   <!-- MAIN -->
   <main class="max-w-6xl mx-auto px-4 py-12">
-    <section class="grid md:grid-cols-3 gap-8 items-center">
 
-      <!-- LEFT: text content -->
-      <div class="col-span-2">
+    <section class="grid md:grid-cols-3 gap-8 items-start">
 
-        <!-- bold intro line required -->
+      <!-- MOBILE PROFILE PHOTO -->
+      <div class="flex md:hidden justify-center mb-6">
+        <div class="w-48 h-48 rounded-full border p-2 bg-white shadow-sm">
+          <img src="profile.jpg" alt="Nazar Khalid" class="w-full h-full rounded-full object-cover">
+        </div>
+      </div>
+
+      <!-- LEFT TEXT -->
+      <div class="md:col-span-2">
+
         <p class="mt-4 text-gray-800"><strong>Hi, I'm Nazar Khalid</strong></p>
 
-        <!-- Inserted paragraphs exactly as provided -->
+        <!-- NEW PAYAL-STYLE CV SENTENCE -->
+        <p class="mt-4 text-gray-700">
+          My latest CV is available <a href="cv.html" class="underline text-blue-700">here</a>.
+        </p>
+
         <p class="mt-4 text-gray-700">
           I am a Ph.D. candidate in Demography and Sociology at the University of Pennsylvania, where I study how structural inequalities shape life outcomes in marginalized communities. My research examines how caste, class, and gender hierarchies intersect with environmental disruptions, social policies, and cultural norms to affect education, health, and wellbeing in India.
         </p>
@@ -69,26 +80,19 @@
         </p>
 
         <p class="mt-4 text-gray-700">
-          I was awarded the University of Pennsylvania Inaugural Presidential Fellowship (2021-2024). My research has been published in RSF: The Russell Sage Foundation Journal of the Social Sciences, Economics of Education Review, World Development, PLOS ONE, Health Policy and Planning, and Economic and Political Weekly, among others.
+          I was awarded the University of Pennsylvania Inaugural Presidential Fellowship (2021–2024). My research has been published in RSF: The Russell Sage Foundation Journal of the Social Sciences, Economics of Education Review, World Development, PLOS ONE, Health Policy and Planning, and Economic and Political Weekly, among others.
         </p>
 
-        <!-- QUICK LINKS: only CV as requested -->
-        <div class="mt-8">
-          <a href="cv.html" class="inline-block px-4 py-2 border rounded bg-gray-50 hover:bg-gray-100">My latest CV is here</a>
-        </div>
-
       </div>
 
-      <!-- RIGHT: profile pic (kept only here) -->
-      <div class="flex items-start justify-center">
-        <!-- keep head uncropped: object-contain and circular container -->
-        <div class="w-44 h-44 rounded-full border p-2 bg-white flex items-center justify-center">
-          <img src="profile.jpg" alt="Nazar Khalid" class="w-full h-full rounded-full object-contain">
+      <!-- DESKTOP PROFILE PHOTO -->
+      <div class="hidden md:flex justify-center">
+        <div class="w-52 h-52 rounded-full border p-2 bg-white shadow-sm">
+          <img src="profile.jpg" alt="Nazar Khalid" class="w-full h-full rounded-full object-cover">
         </div>
       </div>
+
     </section>
-
-    
 
   </main>
 
@@ -100,9 +104,13 @@
 
   <script>
     document.getElementById('year-home').textContent = new Date().getFullYear();
-    const btn = document.getElementById('menuBtn'), mobile = document.getElementById('mobileMenu');
+
+    const btn = document.getElementById('menuBtn');
+    const mobile = document.getElementById('mobileMenu');
     if (btn) btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
-    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobile.classList.add('hidden')));
+
+    document.querySelectorAll('.mobile-link')
+      .forEach(l => l.addEventListener('click', () => mobile.classList.add('hidden')));
   </script>
 
 </body>
