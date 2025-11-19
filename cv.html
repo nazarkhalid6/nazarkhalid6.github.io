@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nazar Khalid CV</title>
-
-  <!-- Tailwind CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nazar Khalid — CV</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     html { scroll-behavior: smooth; }
     .sidebar { min-width: 220px; max-width: 280px; }
-    .profile-ring { box-shadow: 0 0 0 6px rgba(59,130,246,0.09); } /* soft blue ring */
+    .profile-ring { box-shadow: 0 0 0 6px rgba(59,130,246,0.09); }
     .pdf-frame { border: 8px solid #444; padding: 6px; background: #f3f3f3; }
   </style>
 </head>
@@ -21,26 +19,28 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+
       <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
 
+      <!-- DESKTOP NAV -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="research.html" class="hover:underline">Research</a>
-        <a href="public-writings.html" class="hover:underline">Public Writings</a>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="policy-research.html">Policy Research</a>
         <a href="cv.html" class="underline font-semibold">CV</a>
-        <a href="media.html" class="hover:underline">Media & Outreach</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
+        <a href="media.html">Media & Outreach</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
-      <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Toggle menu">☰</button>
+      <button id="menuBtn" class="md:hidden p-2 border rounded">☰</button>
     </div>
 
-    <!-- mobile menu -->
+    <!-- MOBILE MENU -->
     <div id="mobileMenu" class="md:hidden hidden border-t">
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="index.html" class="mobile-link">Home</a>
         <a href="research.html" class="mobile-link">Research</a>
-        <a href="public-writings.html" class="mobile-link">Public Writings</a>
+        <a href="policy-research.html" class="mobile-link">Policy Research</a>
         <a href="cv.html" class="mobile-link font-semibold underline">CV</a>
         <a href="media.html" class="mobile-link">Media & Outreach</a>
         <a href="contact.html" class="mobile-link">Contact</a>
@@ -55,49 +55,55 @@
     <aside class="sidebar col-span-12 md:col-span-3">
       <div class="sticky top-24">
 
+        <!-- PROFILE PHOTO -->
         <div class="flex justify-center">
-          <!-- Upload profile.jpg to repo root or change path -->
-          <img src="profile.jpg" alt="Nazar Khalid" class="w-40 h-40 rounded-full object-contain profile-ring border-4 border-white">
+          <img src="profile.jpg" alt="Nazar Khalid" class="w-40 h-40 rounded-full object-cover profile-ring border-4 border-white">
         </div>
 
         <div class="text-center mt-4">
           <h1 class="text-xl font-semibold">Nazar Khalid</h1>
-          <p class="text-sm text-gray-600 mt-1">PhD Student — Demography & Population Studies</p>
+          <p class="text-sm text-gray-600 mt-1">PhD Candidate — Demography & Sociology</p>
         </div>
 
+        <!-- SIDEBAR NAV -->
         <nav class="mt-8 border-t pt-6">
           <ul class="space-y-3 text-sm">
             <li><a href="index.html" class="block py-2 hover:underline">Home</a></li>
             <li><a href="research.html" class="block py-2 hover:underline">Research</a></li>
-            <li><a href="public-writings.html" class="block py-2 hover:underline">Public Writings</a></li>
+            <li><a href="policy-research.html" class="block py-2 hover:underline">Policy Research</a></li>
             <li><a href="cv.html" class="block py-2 font-semibold underline">CV</a></li>
             <li><a href="media.html" class="block py-2 hover:underline">Media & Outreach</a></li>
             <li><a href="contact.html" class="block py-2 hover:underline">Contact</a></li>
           </ul>
         </nav>
 
+        <!-- CONTACT DETAILS -->
         <div class="mt-8 text-xs text-gray-600">
           <p><strong>Email</strong></p>
           <p class="truncate"><a href="mailto:nazark@sas.upenn.edu" class="underline">nazark@sas.upenn.edu</a></p>
+
           <p class="mt-3"><strong>Affiliation</strong></p>
-          <p>Population Studies Center, University of Pennsylvania</p>
+          <p>Population Studies Center<br>University of Pennsylvania</p>
         </div>
 
       </div>
     </aside>
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
     <main class="col-span-12 md:col-span-9">
-      <!-- Title: show only "Nazar Khalid CV" as requested -->
+
+      <!-- HEADER ROW -->
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h2 class="text-3xl font-bold">Nazar Khalid CV</h2>
+          <h2 class="text-3xl font-bold">Curriculum Vitae</h2>
         </div>
 
         <div class="flex items-center gap-3">
-          <!-- Download link uses the exact filename you provided -->
           <a href="NazarKhalid_resume_EPS.pdf" download class="inline-flex items-center gap-2 px-4 py-2 border rounded hover:bg-gray-50">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v12m4-4-4 4-4-4m8 4v4H8v-4" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               d="M12 4v12m4-4-4 4-4-4m8 4v4H8v-4" />
+            </svg>
             Download CV
           </a>
 
@@ -106,28 +112,34 @@
       </div>
 
       <div class="mt-4 text-sm text-gray-600">
-        <span>PhD Student, University of Pennsylvania</span>
+        <span>PhD Candidate, University of Pennsylvania</span>
       </div>
 
-      <!-- Embedded PDF viewer -->
+      <!-- EMBEDDED PDF -->
       <div class="mt-8">
         <div class="pdf-frame mx-auto max-w-full">
-          <!-- Use the exact filename in the iframe src -->
-          <iframe src="NazarKhalid_resume_EPS.pdf" title="Nazar Khalid CV" class="w-full" style="height:78vh; min-height:600px; border:0;"></iframe>
+          <iframe src="NazarKhalid_resume_EPS.pdf" title="Nazar Khalid CV"
+            class="w-full"
+            style="height:78vh; min-height:600px; border:0;">
+          </iframe>
         </div>
 
-        <p class="mt-3 text-xs text-gray-500">If the PDF doesn't display, click "Open" or "Download". On mobile the file may open in the device PDF reader.</p>
+        <p class="mt-3 text-xs text-gray-500">
+          If the PDF does not display, click "Open" or "Download".  
+          On mobile devices, the file may open in your device's PDF viewer.
+        </p>
       </div>
 
-      <!-- Optional short highlights -->
-      <section class="mt-8">
-        <h3 class="text-xl font-semibold">Selected highlights</h3>
+      <!-- OPTIONAL HIGHLIGHTS -->
+      <section class="mt-10">
+        <h3 class="text-xl font-semibold">Selected Highlights</h3>
         <ul class="mt-3 list-disc pl-5 text-gray-700 space-y-2">
           <li>Peer-reviewed work on floods & education, sanitation, energy, and measurement methods.</li>
           <li>Recent talks: PAA (2025), RC28 Shanghai (2024), CIES (2024).</li>
           <li>Fellowships: Penn Presidential PhD Fellowship; Benjamin Franklin Fellowship.</li>
         </ul>
       </section>
+
     </main>
   </div>
 
@@ -141,11 +153,14 @@
   <!-- JS -->
   <script>
     document.getElementById('year-cv').textContent = new Date().getFullYear();
-    const btn = document.getElementById('menuBtn'), mobileMenu = document.getElementById('mobileMenu');
-    if (btn && mobileMenu) {
-      btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-      document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
-    }
+
+    const btn = document.getElementById('menuBtn');
+    const mobile = document.getElementById('mobileMenu');
+
+    if (btn) btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link')
+      .forEach(a => a.addEventListener('click', () => mobile.classList.add('hidden')));
   </script>
+
 </body>
 </html>
