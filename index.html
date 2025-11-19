@@ -17,10 +17,11 @@
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
 
+      <!-- DESKTOP NAV -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="index.html" class="underline">Home</a>
         <a href="research.html">Research</a>
-        <a href="public-writings.html">Policy research</a>
+        <a href="policy-research.html">Policy Research</a>
         <a href="cv.html">CV</a>
         <a href="media.html">Media</a>
         <a href="contact.html">Contact</a>
@@ -29,11 +30,12 @@
       <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Toggle menu">☰</button>
     </div>
 
+    <!-- MOBILE MENU -->
     <div id="mobileMenu" class="md:hidden hidden border-t">
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="index.html" class="mobile-link">Home</a>
         <a href="research.html" class="mobile-link">Research</a>
-        <a href="public-writings.html" class="mobile-link">Policy research</a>
+        <a href="policy-research.html" class="mobile-link">Policy Research</a>
         <a href="cv.html" class="mobile-link">CV</a>
         <a href="media.html" class="mobile-link">Media</a>
         <a href="contact.html" class="mobile-link">Contact</a>
@@ -58,7 +60,7 @@
 
         <p class="mt-4 text-gray-800"><strong>Hi, I'm Nazar Khalid</strong></p>
 
-        <!-- NEW PAYAL-STYLE CV SENTENCE -->
+        <!-- PAYAL-STYLE CV LINE -->
         <p class="mt-4 text-gray-700">
           My latest CV is available <a href="cv.html" class="underline text-blue-700">here</a>.
         </p>
@@ -96,12 +98,14 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="mt-12 py-8 border-t">
     <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
       © <span id="year-home"></span> Nazar Khalid.
     </div>
   </footer>
 
+  <!-- JS -->
   <script>
     document.getElementById('year-home').textContent = new Date().getFullYear();
 
