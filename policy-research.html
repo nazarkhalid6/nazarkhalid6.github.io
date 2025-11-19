@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Policy research</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Policy Research — Nazar Khalid</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>html{scroll-behavior:smooth}</style>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
+
 <body class="bg-white text-gray-900">
 
   <!-- HEADER -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
-    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+
       <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
+
+      <!-- DESKTOP NAV -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html" data-nav="/index.html">Home</a>
-        <a href="research.html" data-nav="/research.html">Research</a>
-        <a href="public-writings.html" data-nav="/policy-research.html" class="underline font-semibold">Public Writings</a>
-        <a href="cv.html" data-nav="/cv.html">CV</a>
-        <a href="media.html" data-nav="/media.html">Media & Outreach</a>
-        <a href="contact.html" data-nav="/contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="policy-research.html" class="underline font-semibold">Policy Research</a>
+        <a href="cv.html">CV</a>
+        <a href="media.html">Media & Outreach</a>
+        <a href="contact.html">Contact</a>
       </nav>
+
       <button id="menuBtn" class="md:hidden p-2 border rounded">☰</button>
     </div>
+
+    <!-- MOBILE MENU -->
     <div id="mobileMenu" class="md:hidden hidden border-t">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="index.html" class="mobile-link">Home</a>
         <a href="research.html" class="mobile-link">Research</a>
-        <a href="public-writings.html" class="mobile-link">Policy Research</a>
+        <a href="policy-research.html" class="mobile-link">Policy Research</a>
         <a href="cv.html" class="mobile-link">CV</a>
         <a href="media.html" class="mobile-link">Media & Outreach</a>
         <a href="contact.html" class="mobile-link">Contact</a>
@@ -34,11 +45,15 @@
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-semibold">Public Writings & Policy Scholarship</h1>
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+
+    <h1 class="text-3xl font-semibold">Policy Research & Public Writings</h1>
     <p class="text-gray-600 mt-2">Selected commentaries, op-eds, and technical writing for policy audiences.</p>
 
     <div class="mt-8 space-y-6">
+
+      <!-- ARTICLE BLOCKS -->
       <article class="p-5 border rounded-lg">
         <h2 class="font-semibold">Disrespectful Maternity Care: Labour Room Violence in Government Health Facilities</h2>
         <p class="text-sm text-gray-600">The India Forum (2022)</p>
@@ -98,19 +113,28 @@
         <p class="text-sm text-gray-600">NCAER (2020) — Technical report</p>
         <a href="https://github.com/riceinstitute/content/blob/release/research/hathi-et-al-2020-mobile-phone-survey-methods-for-measuring-social-discrimination.pdf" target="_blank" class="underline mt-2 inline-block">Read report</a>
       </article>
+
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="mt-12 py-8 border-t">
-    <div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year-pw"></span> Nazar Khalid.</div>
+    <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
+      © <span id="year-pw"></span> Nazar Khalid.
+    </div>
   </footer>
 
   <script>
-    document.getElementById('year-pw').textContent=new Date().getFullYear();
-    const btn=document.getElementById('menuBtn'), mobile=document.getElementById('mobileMenu');
-    if(btn){ btn.addEventListener('click',()=>mobile.classList.toggle('hidden')); }
-    document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>mobile.classList.add('hidden')));
-    document.querySelectorAll('nav a[data-nav]').forEach(a=>{ if(location.pathname.toLowerCase().endsWith(a.getAttribute('data-nav'))) a.classList.add('underline'); });
+    document.getElementById('year-pw').textContent = new Date().getFullYear();
+
+    const btn = document.getElementById('menuBtn'),
+          mobile = document.getElementById('mobileMenu');
+
+    if (btn) btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link').forEach(l =>
+      l.addEventListener('click', () => mobile.classList.add('hidden'))
+    );
   </script>
+
 </body>
 </html>
