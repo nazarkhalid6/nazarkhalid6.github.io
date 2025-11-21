@@ -17,20 +17,18 @@
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
 
-      <!-- DESKTOP NAV -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="index.html" class="underline">Home</a>
         <a href="research.html">Research</a>
         <a href="policy-research.html">Policy Research</a>
         <a href="cv.html">CV</a>
         <a href="media.html">Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="teaching.html">Teaching</a>
       </nav>
 
       <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Toggle menu">☰</button>
     </div>
 
-    <!-- MOBILE MENU -->
     <div id="mobileMenu" class="md:hidden hidden border-t">
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="index.html" class="mobile-link">Home</a>
@@ -38,7 +36,7 @@
         <a href="policy-research.html" class="mobile-link">Policy Research</a>
         <a href="cv.html" class="mobile-link">CV</a>
         <a href="media.html" class="mobile-link">Media</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
+        <a href="teaching.html" class="mobile-link">Teaching</a>
       </div>
     </div>
   </header>
@@ -48,17 +46,10 @@
 
     <section class="grid md:grid-cols-3 gap-8 items-start">
 
-      <!-- MOBILE PROFILE PHOTO -->
-      <div class="flex md:hidden justify-center mb-6">
-        <div class="w-48 h-48 rounded-full border p-2 bg-white shadow-sm">
-          <img src="profile.jpg" alt="Nazar Khalid" class="w-full h-full rounded-full object-cover">
-        </div>
-      </div>
-
       <!-- LEFT TEXT -->
       <div class="md:col-span-2">
 
-        <p class="mt-4 text-gray-800"><strong>Hi, I'm Nazar Khalid</strong></p>
+        <p class="mt-4 text-gray-800 font-bold text-3xl">Hi, I'm Nazar Khalid</p>
 
         <!-- PAYAL-STYLE CV LINE -->
         <p class="mt-4 text-gray-700">
@@ -87,10 +78,18 @@
 
       </div>
 
-      <!-- DESKTOP PROFILE PHOTO -->
+      <!-- RIGHT: RECTANGULAR PHOTO -->
       <div class="hidden md:flex justify-center">
-        <div class="w-52 h-52 rounded-full border p-2 bg-white shadow-sm">
-          <img src="profile.jpg" alt="Nazar Khalid" class="w-full h-full rounded-full object-cover">
+        <div class="w-64 h-auto border rounded-lg overflow-hidden shadow-sm">
+          <img src="profile.jpg" alt="Nazar Khalid"
+               class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- MOBILE PHOTO BELOW TEXT -->
+      <div class="md:hidden flex justify-center mt-6">
+        <div class="w-64 h-auto border rounded-lg overflow-hidden shadow-sm">
+          <img src="profile.jpg" alt="Nazar Khalid" class="w-full h-full object-cover">
         </div>
       </div>
 
@@ -98,14 +97,12 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="mt-12 py-8 border-t">
     <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
       © <span id="year-home"></span> Nazar Khalid.
     </div>
   </footer>
 
-  <!-- JS -->
   <script>
     document.getElementById('year-home').textContent = new Date().getFullYear();
 
