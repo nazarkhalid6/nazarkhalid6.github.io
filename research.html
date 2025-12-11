@@ -12,7 +12,7 @@
     .card-img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* preserves full image without zoom */
+      object-fit: cover;
     }
 
     .card {
@@ -20,6 +20,21 @@
       border-radius: 10px;
       background: white;
       overflow: hidden;
+    }
+
+    /* Abstract line clamp */
+    .abstract {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .abstract.collapsed {
+      -webkit-line-clamp: 2; /* show ~2 lines */
+    }
+
+    .abstract.expanded {
+      -webkit-line-clamp: unset;
     }
   </style>
 </head>
@@ -61,6 +76,8 @@
     <h1 class="text-4xl font-semibold mb-2">Research publications</h1>
     <div class="h-1 w-24 bg-blue-600 rounded"></div>
     <p class="mt-4 text-gray-700 max-w-3xl">
+      Selected peer-reviewed publications. Click “Read more” to expand the abstract for each paper,
+      or follow the journal link to access the full article.
     </p>
 
     <div class="mt-10 space-y-8">
@@ -80,20 +97,34 @@
             <span class="font-medium">Economics of Education Review</span>, 2025.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            India has the world’s largest number of school-aged children. The majority live in rural areas, many of which are highly flood-prone. Previous studies document that in such areas, floods are 
-            <p>
-          <div id="abs1-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-              India has the world’s largest number of school-aged children. The majority live in rural areas, many of which are highly flood-prone. Previous studies document that in such areas, floods are associated with lower enrollments, attendance, and learning, in some cases with differentiation by gender, caste/religion, and family SES. Previous literature suggests that components of community infrastructure have positive associations with children’s learning. However, previous literature has not addressed whether better community physical and social infrastructures are associated with (1) smaller flood-related learning losses on average, (2) different learning for marginalized versus other children in the absence of floods, and (3) different vulnerabilities to floods for marginalized versus other children. This paper finds that (1) most aspects of community physical and social infrastructure are not associated with lower flood-related learning losses on average, but proximity to towns and several components of social infrastructure are associated with lower flood-related learning losses on average, (2) community physical and social infrastructure components have heterogeneous associations, in some cases increasing, in most cases not affecting, and in other cases reducing disparities in learning between marginalized and other children in the absence of floods, and (3) community physical and social infrastructure components have heterogeneous effects, in some cases increasing, in most cases not affecting, and in other cases reducing disparities in learning between marginalized and other children in the presence of floods.
-
-            </p>
-          </div>
+          <p id="abs1-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            India has the world’s largest number of school-aged children. The majority live in rural
+            areas, many of which are highly flood-prone. Previous studies document that in such
+            areas, floods are associated with lower enrollments, attendance, and learning, in some
+            cases with differentiation by gender, caste/religion, and family SES. Previous
+            literature suggests that components of community infrastructure have positive
+            associations with children’s learning. However, previous literature has not addressed
+            whether better community physical and social infrastructures are associated with (1)
+            smaller flood-related learning losses on average, (2) different learning for
+            marginalized versus other children in the absence of floods, and (3) different
+            vulnerabilities to floods for marginalized versus other children. This paper finds that
+            (1) most aspects of community physical and social infrastructure are not associated with
+            lower flood-related learning losses on average, but proximity to towns and several
+            components of social infrastructure are associated with lower flood-related learning
+            losses on average, (2) community physical and social infrastructure components have
+            heterogeneous associations, in some cases increasing, in most cases not affecting, and
+            in other cases reducing disparities in learning between marginalized and other children
+            in the absence of floods, and (3) community physical and social infrastructure
+            components have heterogeneous effects, in some cases increasing, in most cases not
+            affecting, and in other cases reducing disparities in learning between marginalized and
+            other children in the presence of floods.
+          </p>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs1">
+                    data-abstract-target="abs1-abstract">
               Read more
             </button>
             <a href="https://www.sciencedirect.com/science/article/pii/S0272775725000159"
@@ -120,21 +151,28 @@
             <span class="font-medium">RSF: The Russell Sage Foundation Journal of the Social Sciences</span>, 2024.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            This article examines how floods shape children’s grade progression and learning, and how
-            these effects differ by caste, religion, gender, and household resources.
+          <p id="abs2-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            Floods cause extensive damage in high-income countries, including the United States, but
+            problems are more severe in low- and middle-income countries (LMICs) that lack
+            preventative and mitigating infrastructure. Marginalized children’s education in LMICs
+            might be particularly vulnerable. Using the Indian Human Development Survey, we
+            investigate flood exposure implications for the education of school-age rural children,
+            paying particular attention to children from marginalized groups. Results show that
+            lower-caste Hindu, Muslim, and poorer children with less-educated parents in
+            agricultural households are more likely to experience flooding. Interactions between
+            flooding and marginalization characteristics indicate that flood exposure is associated
+            with disproportionately negative learning outcomes for girls and that economic resources
+            may mitigate flood exposure effects on delayed school progress. While greater exposures
+            for marginalized groups are concerning, the limited number and modest magnitudes of
+            documented negative effect heterogeneities for marginalized children are somewhat better
+            news.
           </p>
-
-          <div id="abs2-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-              Floods cause extensive damage in high-income countries, including the United States, but problems are more severe in low- and middle-income countries (LMICs) that lack preventative and mitigating infrastructure. Marginalized children’s education in LMICs might be particularly vulnerable. Using the Indian Human Development Survey, we investigate flood exposure implications for the education of school-age rural children, paying particular attention to children from marginalized groups. Results show that lower-caste Hindu, Muslim, and poorer children with less-educated parents in agricultural households are more likely to experience flooding. Interactions between flooding and marginalization characteristics indicate that flood exposure is associated with disproportionately negative learning outcomes for girls and that economic resources may mitigate flood exposure effects on delayed school progress. While greater exposures for marginalized groups are concerning, the limited number and modest magnitudes of documented negative effect heterogeneities for marginalized children are somewhat better news.
-            </p>
-          </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs2">
+                    data-abstract-target="abs2-abstract">
               Read more
             </button>
             <a href="https://www.rsfjournal.org/content/10/1/230"
@@ -161,21 +199,31 @@
             <span class="font-medium">World Development</span>, 2021.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            We study why subsidised LPG connections do not readily translate into sustained clean fuel
-            use, highlighting the role of refill affordability, supply reliability, and intra-household power.
+          <p id="abs3-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            Exposure to air pollution from cooking with solid fuels has important consequences for
+            public health. This paper focuses on rural north India, where despite robust economic
+            growth and government subsidies, the vast majority of households mainly use solid fuels.
+            We draw on new qualitative and quantitative data collected in the context of a policy
+            environment that dramatically expanded ownership of liquid petroleum gas (LPG) to
+            examine why households are slow to adopt clean fuels in rural north India. We find that
+            patriarchal gender norms and attitudes encourage the use of solid fuels in this region.
+            North Indian society confers low status to women, promotes women’s seclusion, and
+            constrains women’s engagement in economic activities outside of the home. These beliefs
+            encourage women to preserve gas, promote women’s work that facilitates the use of solid
+            fuels, and hinder communication between the cook and the decision-maker regarding LPG
+            refills. When rural north Indian households use gas, it is frequently to facilitate the
+            adherence to norms of seclusion that prevent women from leaving the home to collect
+            solid fuels. In addition to expanding access and improving economic conditions, future
+            research and policy interventions should pay careful attention to the gender norms and
+            attitudes that discourage the use of gas. Addressing these beliefs and norms is
+            essential to sustained LPG use and health improvements.
           </p>
-
-          <div id="abs3-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-              Exposure to air pollution from cooking with solid fuels has important consequences for public health. This paper focuses on rural north India, where despite robust economic growth and government subsidies, the vast majority of households mainly use solid fuels. We draw on new qualitative and quantitative data collected in the context of a policy environment that dramatically expanded ownership of liquid petroleum gas (LPG) to examine why households are slow to adopt clean fuels in rural north India. We find that patriarchal gender norms and attitudes encourage the use of solid fuels in this region. North Indian society confers low status to women, promotes women’s seclusion, and constrains women’s engagement in economic activities outside of the home. These beliefs encourage women to preserve gas, promote women’s work that facilitates the use of solid fuels, and hinder communication between the cook and the decision-maker regarding LPG refills. When rural north Indian households use gas, it is frequently to facilitate the adherence to norms of seclusion that prevent women from leaving the home to collect solid fuels. In addition to expanding access and improving economic conditions, future research and policy interventions should pay careful attention to the gender norms and attitudes that discourage the use of gas. Addressing these beliefs and norms is essential to sustained LPG use and health improvements.
-            </p>
-          </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs3">
+                    data-abstract-target="abs3-abstract">
               Read more
             </button>
             <a href="https://www.sciencedirect.com/science/article/abs/pii/S0305750X21002977"
@@ -202,21 +250,34 @@
             <span class="font-medium">Health Policy and Planning</span>, 2021.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            Evaluates the feasibility and biases of mental health measurement through phone surveys,
-            with guidance on instrument design in low-resource settings.
+          <p id="abs4-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            In high-income countries, population health surveys often measure mental health. This is
+            less common in low- and middle-income countries (LMICs), including in India, where
+            mental health is under-researched relative to its disease burden. The objective of this
+            study is to assess the performance of two questionnaires for measuring population mental
+            health in a mobile phone survey. We adapt the Kessler-6 screening questionnaire and the
+            World Health Organization’s Self-Reporting Questionnaire (SRQ) for a mobile phone survey
+            in the Indian states of Bihar, Jharkhand and Maharashtra. The questionnaires differ in
+            the symptoms they measure and in the number of response options offered. Questionnaires
+            are randomly assigned to respondents. We consider a questionnaire to perform well if it
+            identifies geographic and demographic disparities in mental health that are consistent
+            with the literature and does not suffer from selective non-response. Both questionnaires
+            measured less mental distress in Maharashtra than in Bihar and Jharkhand, which is
+            consistent with Maharashtra’s higher human development indicators. The adapted SRQ, but
+            not the adapted Kessler-6, identified women as having worse mental health than men in
+            all three states. Conclusions about population mental health based on the adapted
+            Kessler-6 are likely to be influenced by low response rates (about 82% across the three
+            samples). Respondents were different from non-respondents: non-respondents were less
+            educated and more likely to be female. The SRQ’s higher response rate (about 94% across
+            the three states) may reflect the fact that it was developed for use in LMICs and that
+            it focuses on physical, rather than emotional, symptoms, which may be less stigmatized.
           </p>
-
-          <div id="abs4-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-              In high-income countries, population health surveys often measure mental health. This is less common in low- and middle-income countries (LMICs), including in India, where mental health is under-researched relative to its disease burden. The objective of this study is to assess the performance of two questionnaires for measuring population mental health in a mobile phone survey. We adapt the Kessler-6 screening questionnaire and the World Health Organization’s Self-Reporting Questionnaire (SRQ) for a mobile phone survey in the Indian states of Bihar, Jharkhand and Maharashtra. The questionnaires differ in the symptoms they measure and in the number of response options offered. Questionnaires are randomly assigned to respondents. We consider a questionnaire to perform well if it identifies geographic and demographic disparities in mental health that are consistent with the literature and does not suffer from selective non-response. Both questionnaires measured less mental distress in Maharashtra than in Bihar and Jharkhand, which is consistent with Maharashtra’s higher human development indicators. The adapted SRQ, but not the adapted Kessler-6, identified women as having worse mental health than men in all three states. Conclusions about population mental health based on the adapted Kessler-6 are likely to be influenced by low response rates (about 82% across the three samples). Respondents were different from non-respondents: non-respondents were less educated and more likely to be female. The SRQ’s higher response rate (about 94% across the three states) may reflect the fact that it was developed for use in LMICs and that it focuses on physical, rather than emotional, symptoms, which may be less stigmatized.
-            </p>
-          </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs4">
+                    data-abstract-target="abs4-abstract">
               Read more
             </button>
             <a href="https://academic.oup.com/heapol/article/36/5/606/6163121"
@@ -243,21 +304,26 @@
             <span class="font-medium">PLOS ONE</span>, 2021.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            Links discriminatory food allocation within households to symptoms of psychological
-            distress among women in rural north India.
+          <p id="abs5-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            The 2011 India Human Development Survey found that in about a quarter of Indian
+            households, women are expected to have their meals after men have finished eating. This
+            study investigates whether this form of gender discrimination is associated with worse
+            mental health outcomes for women. Our primary data source is a new, state-representative
+            mobile phone survey of women ages 18–65 in Bihar, Jharkhand, and Maharashtra in 2018.
+            We measure mental health using questions from the World Health Organization’s
+            Self-Reporting Questionnaire. We find that, for women in these states, eating last is
+            correlated with worse mental health, even after accounting for differences in
+            socioeconomic status. We discuss two possible mechanisms for this relationship: eating
+            last may be associated with worse mental health because it is associated with worse
+            physical health, or eating last may be associated with poor mental health because it is
+            associated with less autonomy, or both.
           </p>
-
-          <div id="abs5-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-              The 2011 India Human Development Survey found that in about a quarter of Indian households, women are expected to have their meals after men have finished eating. This study investigates whether this form of gender discrimination is associated with worse mental health outcomes for women. Our primary data source is a new, state-representative mobile phone survey of women ages 18–65 in Bihar, Jharkhand, and Maharashtra in 2018. We measure mental health using questions from the World Health Organization’s Self-Reporting Questionnaire. We find that, for women in these states, eating last is correlated with worse mental health, even after accounting for differences in socioeconomic status. We discuss two possible mechanisms for this relationship: eating last may be associated with worse mental health because it is associated with worse physical health, or eating last may be associated with poor mental health because it is associated with less autonomy, or both.
-            </p>
-          </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs5">
+                    data-abstract-target="abs5-abstract">
               Read more
             </button>
             <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0247065"
@@ -284,21 +350,27 @@
             <span class="font-medium">CASTE: A Global Journal on Social Exclusion</span>, 2020.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            Combines attitudinal and behavioural measures to document the persistence of caste and
-            gender prejudice in contemporary India.
+          <p id="abs6-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            We present results from a new representative telephonic survey, which confirms
+            persistence of conservative gender and caste attitudes. In particular, we find that high
+            proportions of men and women in all of the social groups we study disapprove of women
+            working outside the home, say that it is acceptable for husbands to beat their wives,
+            and would object to relatives marrying a Dalit person. By analyzing data from the
+            National Family Health Survey and the India Human Development Survey, we see that the
+            outcomes associated with these attitudes are even more conservative: a smaller fraction
+            of women work than those who say it is acceptable, a larger fraction of women experience
+            violence in marriage than men who say it is acceptable, and an even smaller fraction of
+            people have intercaste marriages than people who say they would not oppose. With a few
+            exceptions, the attitudes and outcomes we study vary surprisingly little by respondent
+            gender, caste, and religion. Dr Ambedkar’s legacy is indeed unfinished – people from all
+            backgrounds must continue to work for the equality and dignity of women and Dalits.
           </p>
-
-          <div id="abs6-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-    We present results from a new representative telephonic survey, which confirms persistence of conservative gender and caste attitudes.  In particular, we find that high proportions of men and women in all of the social groups we study disapprove of women working outside the home, say that it is acceptable for husbands to beat their wives, and would object to relatives marrying a Dalit person.  By analyzing data from the National Family Health Survey and the India Human Development Survey, we see that the outcomes associated with these attitudes are even more conservative: a smaller fraction of women work than those who say it is acceptable, a larger fraction of women experience violence in marriage than men who say it is acceptable, and an even smaller fraction of people have intercaste marriages than people who say they would not oppose. With a few exceptions, the attitudes and outcomes we study vary surprisingly little by respondent gender, caste, and religion.  Dr. Amdebkar’s legacy is indeed unfinished – people from all backgrounds must continue to work for the equality and dignity of women and Dalits.
-            </p>
-          </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs6">
+                    data-abstract-target="abs6-abstract">
               Read more
             </button>
             <a href="https://journals.library.brandeis.edu/index.php/caste/article/view/172"
@@ -325,21 +397,24 @@
             <span class="font-medium">Economic and Political Weekly</span>, 2020.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            Uses panel data to assess progress in reducing open defecation during the Swachh Bharat
-            Mission and documents persistent gaps.
+          <p id="abs7-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            Since October 2014, the Government of India has worked towards the goal of eliminating
+            open defecation by 2019 through the Swachh Bharat Mission. In June 2014, the results of
+            a survey of rural sanitation behaviour in North India were first reported. The results
+            from a late 2018 survey that revisited households from the 2014 survey in four
+            states—Bihar, Madhya Pradesh, Rajasthan, and Uttar Pradesh—are presented. Although rural
+            latrine ownership increased considerably over this period, open defecation remains very
+            common in these four states. There is substantial heterogeneity across states in what
+            the SBM did and how. These outcomes suggest the need for a transparent, fact-based
+            public dialogue about the SBM, its costs and benefits, and its accomplishments and
+            means.
           </p>
-
-          <div id="abs7-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-              Since October 2014, the Government of India has worked towards the goal of eliminating open defecation by 2019 through the Swachh Bharat Mission. In June 2014, the results of a survey of rural sanitation behaviour in North India were first reported. The results from a late 2018 survey that revisited households from the 2014 survey in four states—Bihar, Madhya Pradesh, Rajasthan, and Uttar Pradesh—are presented. Although rural latrine ownership increased considerably over this period, open defecation remains very common in these four states. There is substantial heterogeneity across states in what the sbm did and how. These outcomes suggest the need for a transparent, fact-based public dialogue about the sbm, its costs and benefits, and its accomplishments and means.
-            </p>
-          </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs7">
+                    data-abstract-target="abs7-abstract">
               Read more
             </button>
             <a href="https://www.epw.in/journal/2020/21/special-articles/revisiting-open-defecation.html"
@@ -366,25 +441,19 @@
             <span class="font-medium">Economic and Political Weekly</span>, 2020.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            Analyses why households continue to rely on solid fuels despite access to cleaner
-            alternatives, with implications for energy policy.
+          <p id="abs8-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            We study patterns of cooking fuel use in rural north India, focusing on households that
+            have access to LPG but continue to use wood or dung. The analysis highlights how fuel
+            stacking, affordability constraints, and supply interruptions contribute to the
+            persistence of solid fuel use, underscoring the need for policies that address both
+            access and sustained use.
           </p>
-
-          <div id="abs8-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-              We study patterns of cooking fuel use in rural north India, focusing on households that
-              have access to LPG but continue to use wood or dung. The analysis highlights how fuel
-              stacking, affordability constraints, and supply interruptions contribute to the
-              persistence of solid fuel use, underscoring the need for policies that address both
-              access and sustained use.
-            </p>
-          </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs8">
+                    data-abstract-target="abs8-abstract">
               Read more
             </button>
             <a href="https://www.epw.in/journal/2020/3/special-articles/persistence-solid-fuel-use-rural-north-india.html"
@@ -411,25 +480,19 @@
             <span class="font-medium">Economic and Political Weekly</span>, 2018.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            Documents everyday experiences of discrimination and contrasts them with how often such
-            experiences are reported and acknowledged.
+          <p id="abs9-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            Combining survey questions on everyday treatment with items on perceived discrimination,
+            this paper examines how Dalit and Muslim respondents in north India describe and label
+            their experiences. We show that discriminatory acts are common, but are not always named
+            as “discrimination,” revealing gaps between lived experience and reported perceptions
+            that matter for policy and politics.
           </p>
-
-          <div id="abs9-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-              Combining survey questions on everyday treatment with items on perceived discrimination,
-              this paper examines how Dalit and Muslim respondents in north India describe and label
-              their experiences. We show that discriminatory acts are common, but are not always
-              named as “discrimination,” revealing gaps between lived experience and reported
-              perceptions that matter for policy and politics.
-            </p>
-          </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs9">
+                    data-abstract-target="abs9-abstract">
               Read more
             </button>
             <a href="https://www.epw.in/journal/2018/42/commentary/experiences-and-perceptions.html"
@@ -456,26 +519,19 @@
             <span class="font-medium">Economic and Political Weekly</span>, 2017.
           </p>
 
-          <p class="mt-3 text-gray-700">
-            Examines how biometric authentication affects access to subsidised food and highlights
-            risks of exclusion under Aadhaar-linked welfare delivery.
+          <p id="abs10-abstract"
+             class="mt-3 text-gray-700 text-sm abstract collapsed">
+            We study the rollout of Aadhaar-based biometric authentication in the public distribution
+            system (PDS) in Jharkhand. Drawing on household survey data and field interviews, the
+            paper documents both reductions in some forms of leakage and new barriers to access,
+            including authentication failures and increased transaction costs for poor households.
+            The findings raise concerns about exclusion in technology-mediated welfare systems.
           </p>
-
-          <div id="abs10-full" class="mt-2 text-gray-700 text-sm hidden">
-            <p>
-              We study the rollout of Aadhaar-based biometric authentication in the public
-              distribution system (PDS) in Jharkhand. Drawing on household survey data and field
-              interviews, the paper documents both reductions in some forms of leakage and new
-              barriers to access, including authentication failures and increased transaction costs
-              for poor households. The findings raise concerns about exclusion in technology-mediated
-              welfare systems.
-            </p>
-          </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-4">
             <button type="button"
                     class="text-sm text-blue-700 underline"
-                    data-abstract-toggle="abs10">
+                    data-abstract-target="abs10-abstract">
               Read more
             </button>
             <a href="https://www.epw.in/journal/2017/50/special-articles/aadhaar-and-food-security-jharkhand.html"
@@ -491,7 +547,9 @@
   </main>
 
   <footer class="mt-12 py-8 border-t">
-    <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">© <span id="year"></span> Nazar Khalid.</div>
+    <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
+      © <span id="year"></span> Nazar Khalid.
+    </div>
   </footer>
 
   <script>
@@ -507,20 +565,22 @@
       });
     }
 
-    // Abstract toggles
-    document.querySelectorAll('[data-abstract-toggle]').forEach(button => {
+    // Abstract toggles (line-clamp)
+    document.querySelectorAll('[data-abstract-target]').forEach(button => {
       button.addEventListener('click', () => {
-        const key = button.getAttribute('data-abstract-toggle');   // e.g. "abs1"
-        const full = document.getElementById(key + '-full');       // e.g. "abs1-full"
-        if (!full) return;
+        const targetId = button.getAttribute('data-abstract-target');
+        const para = document.getElementById(targetId);
+        if (!para) return;
 
-        const isHidden = full.classList.contains('hidden');
-        full.classList.toggle('hidden');
+        const isCollapsed = para.classList.contains('collapsed');
+        para.classList.toggle('collapsed', !isCollapsed);
+        para.classList.toggle('expanded', isCollapsed);
 
-        button.textContent = isHidden ? 'Read less' : 'Read more';
+        button.textContent = isCollapsed ? 'Read less' : 'Read more';
       });
     });
   </script>
 
 </body>
 </html>
+
