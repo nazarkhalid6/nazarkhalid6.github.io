@@ -520,9 +520,31 @@
   </footer>
 
   <script>
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('menuBtn').onclick = () =>
-      document.getElementById('mobileMenu').classList.toggle('hidden');
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Abstract toggles
+    document.querySelectorAll('[data-abstract-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        const key = button.getAttribute('data-abstract-toggle');   // e.g. "abs1"
+        const full = document.getElementById(key + '-full');       // e.g. "abs1-full"
+        if (!full) return;
+
+        const isHidden = full.classList.contains('hidden');
+        full.classList.toggle('hidden');
+
+        button.textContent = isHidden ? 'Read less' : 'Read more';
+      });
+    });
   </script>
 
 </body>
