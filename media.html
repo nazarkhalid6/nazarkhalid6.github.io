@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Media & Outreach — Nazar Khalid</title>
+  <title>Media & outreach — Nazar Khalid</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
 <body class="bg-white text-gray-900">
@@ -19,82 +23,106 @@
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
-        <a href="policy-research.html">Policy Research</a>
+        <a href="policy-research.html">Policy writings</a>
         <a href="cv.html">CV</a>
-        <a href="media.html" class="underline font-semibold">Media & Outreach</a>
-        <a href="contact.html">Contact</a>
+        <a href="media.html" class="underline font-semibold">Media</a>
+        <a href="teaching.html">Teaching</a>
       </nav>
 
-      <button id="menuBtn" class="md:hidden p-2 border rounded">☰</button>
+      <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Toggle menu">☰</button>
     </div>
 
-    <!-- MOBILE NAV -->
+    <!-- MOBILE MENU -->
     <div id="mobileMenu" class="md:hidden hidden border-t">
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="index.html" class="mobile-link">Home</a>
         <a href="research.html" class="mobile-link">Research</a>
-        <a href="policy-research.html" class="mobile-link">Policy Research</a>
+        <a href="policy-research.html" class="mobile-link">Policy writings</a>
         <a href="cv.html" class="mobile-link">CV</a>
-        <a href="media.html" class="mobile-link">Media & Outreach</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
+        <a href="media.html" class="mobile-link font-semibold underline">Media</a>
+        <a href="teaching.html" class="mobile-link">Teaching</a>
       </div>
     </div>
   </header>
 
   <!-- MAIN -->
-  <main class="max-w-6xl mx-auto px-4 py-12">
+  <main class="max-w-4xl mx-auto px-4 py-12">
 
-    <h1 class="text-3xl font-semibold">Media Coverage & Outreach</h1>
-    <p class="text-gray-600 mt-2">Selected media mentions connected to my research.</p>
+    <h1 class="text-3xl font-semibold">Media &amp; outreach</h1>
+    <p class="text-gray-600 mt-2 text-sm">
+      Selected newspaper articles, podcasts, and other public-facing discussions of my work.
+    </p>
 
-    <div class="mt-10 space-y-10">
+    <div class="mt-8 space-y-10 text-sm leading-relaxed">
 
-      <!-- MEDIA GROUP 1 -->
-      <section>
-        <h2 class="text-xl font-semibold">
-          Revisiting Open Defecation (Economic & Political Weekly, 2020)
-        </h2>
-        <p class="mt-2 text-gray-700">Media coverage:</p>
-        <ul class="list-disc pl-6 mt-2 space-y-1 text-gray-700">
-          <li>Deutsche Welle</li>
-          <li>Hindustan Times</li>
-          <li>The Hindu</li>
-          <li>Business Standard</li>
-          <li>LiveMint</li>
-          <li>IndiaSpend</li>
-          <li>Scroll</li>
-          <li>The Wire</li>
-        </ul>
+      <!-- NEWSPAPER ARTICLES -->
+      <section id="newspaper-articles">
+        <h2 class="text-xl font-semibold">Newspaper articles</h2>
+        <div class="mt-3 space-y-2">
+
+          <p>
+            2019.&nbsp;
+            <a href="https://thewire.in/government/what-indias-next-sanitation-policy-can-learn-from-the-swachh-bharat-mission"
+               target="_blank" rel="noopener noreferrer" class="underline font-medium">
+              What India’s Next Sanitation Policy Can Learn From the Swachh Bharat Mission
+            </a>.
+            <em>The Wire</em>, op-ed.
+          </p>
+
+          <p>
+            2019.&nbsp;
+            <a href="https://www.thehindu.com/opinion/op-ed/miles-to-go-before-becoming-open-defecation-free/article29577319.ece"
+               target="_blank" rel="noopener noreferrer" class="underline font-medium">
+              Miles to go before becoming open defecation free
+            </a>.
+            <em>The Hindu</em>, op-ed.
+          </p>
+
+        </div>
       </section>
 
-      <!-- MEDIA GROUP 2 -->
-      <section>
-        <h2 class="text-xl font-semibold">
-          Persistence of Solid Fuel Use (Economic & Political Weekly, 2020)
-        </h2>
-        <p class="mt-2 text-gray-700">Media coverage:</p>
-        <ul class="list-disc pl-6 mt-2 space-y-1 text-gray-700">
-          <li>Times of India</li>
-          <li>The Hindu</li>
-          <li>LiveMint</li>
-          <li>IndiaSpend</li>
-          <li>Counterview</li>
-        </ul>
-      </section>
+      <!-- PODCASTS & AUDIO / MEDIA FEATURES -->
+      <section id="podcasts">
+        <h2 class="text-xl font-semibold">Podcasts &amp; media features</h2>
+        <div class="mt-3 space-y-2">
 
-      <!-- MEDIA GROUP 3 -->
-      <section>
-        <h2 class="text-xl font-semibold">
-          Aadhaar, Biometric Authentication & PDS (Economic & Political Weekly, 2017)
-        </h2>
-        <p class="mt-2 text-gray-700">Media coverage:</p>
-        <ul class="list-disc pl-6 mt-2 space-y-1 text-gray-700">
-          <li>The Indian Express</li>
-          <li>Hindustan Times</li>
-          <li>The Hindu</li>
-          <li>Business Standard</li>
-          <li>Scroll</li>
-        </ul>
+          <p>
+            2019.&nbsp;
+            <a href="https://indianexpress.com/audio/3-things/explaining-the-problem-of-open-defecation-in-india/6049406/"
+               target="_blank" rel="noopener noreferrer" class="underline font-medium">
+              Explaining the problem of open defecation in India
+            </a>.
+            <em>Indian Express – 3 Things</em> podcast episode.
+          </p>
+
+          <p>
+            2024.&nbsp;
+            <a href="https://www.russellsage.org/news/rsf-journal-contributors-discuss-disparate-effect-disruptive-events-children"
+               target="_blank" rel="noopener noreferrer" class="underline font-medium">
+              RSF Journal Contributors Discuss the Disparate Effect of Disruptive Events on Children
+            </a>.
+            <em>Russell Sage Foundation</em>, research spotlight / discussion.
+          </p>
+
+          <p>
+            2021.&nbsp;
+            <a href="https://academic.oup.com/heapol/pages/podcasts"
+               target="_blank" rel="noopener noreferrer" class="underline font-medium">
+              Measurement of population mental health: Evidence from a mobile phone survey in India
+            </a>.
+            <em>Health Policy and Planning</em>, podcast feature.
+          </p>
+
+          <p>
+            2020.&nbsp;
+            <a href="https://www.ideasforindia.in/topics/miscellany/phone-survey-methodology-for-social-and-economic-research-in-india-hindi"
+               target="_blank" rel="noopener noreferrer" class="underline font-medium">
+              Using phone surveys to measure mental health (Hindi)
+            </a>.
+            <em>Ideas for India</em>, audio / Hindi feature.
+          </p>
+
+        </div>
       </section>
 
     </div>
@@ -103,17 +131,20 @@
   <!-- FOOTER -->
   <footer class="mt-12 py-8 border-t">
     <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
-      © <span id="year-m"></span> Nazar Khalid.
+      © <span id="year-media"></span> Nazar Khalid.
     </div>
   </footer>
 
   <script>
-    document.getElementById('year-m').textContent = new Date().getFullYear();
+    document.getElementById('year-media').textContent = new Date().getFullYear();
 
     const btn = document.getElementById('menuBtn');
     const mobile = document.getElementById('mobileMenu');
 
-    if (btn) btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
+    if (btn && mobile) {
+      btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
+    }
+
     document.querySelectorAll('.mobile-link')
       .forEach(a => a.addEventListener('click', () => mobile.classList.add('hidden')));
   </script>
