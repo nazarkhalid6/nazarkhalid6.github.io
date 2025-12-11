@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nazar Khalid — CV</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
     html { scroll-behavior: smooth; }
   </style>
@@ -16,7 +15,6 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-
       <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
 
       <!-- DESKTOP NAV -->
@@ -46,91 +44,40 @@
   </header>
 
   <!-- MAIN -->
-  <main class="max-w-6xl mx-auto px-4 py-12">
+  <main class="max-w-4xl mx-auto px-4 py-12">
 
-    <!-- Top: photo + basic info -->
-    <section class="grid gap-8 md:grid-cols-3 items-start">
-      <!-- Photo -->
-      <div class="flex justify-center md:justify-start">
-        <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-white shadow-sm">
-          <img src="profile.jpg" alt="Nazar Khalid" class="w-full h-full object-cover">
-        </div>
+    <section class="space-y-6">
+
+      <!-- FIELDWORK PHOTO -->
+      <div class="border border-gray-300 rounded-lg overflow-hidden bg-gray-50">
+        <img
+          src="school_kids.jpg"
+          alt="School children in fieldwork setting"
+          class="w-full h-64 md:h-80 object-cover"
+        >
       </div>
 
-      <!-- Text -->
-      <div class="md:col-span-2">
-        <h1 class="text-3xl font-semibold text-gray-900">Curriculum Vitae</h1>
-        <p class="mt-2 text-sm text-gray-600">
-          Ph.D. candidate in Demography and Sociology, University of Pennsylvania
-        </p>
-
-        <p class="mt-4 text-sm text-gray-700">
-          For a full record of publications, working papers, teaching, talks, and service,
-          please refer to my CV below.
-        </p>
-
-        <!-- CV actions -->
-        <div class="mt-5 flex flex-wrap items-center gap-3">
-          <a href="NazarKhalid_resume_EPS.pdf" download
-             class="inline-flex items-center gap-2 px-4 py-2 border rounded text-sm hover:bg-gray-50">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                 viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 4v12m4-4-4 4-4-4m8 4v4H8v-4" />
-            </svg>
-            Download CV
-          </a>
-
-          <a href="NazarKhalid_resume_EPS.pdf" target="_blank"
-             class="text-sm text-blue-700 underline">
-            Open in new tab
-          </a>
-        </div>
-
-        <!-- Contact line (optional, but useful) -->
-        <p class="mt-4 text-xs text-gray-600">
-          Email:
-          <a href="mailto:nazark@sas.upenn.edu" class="underline">
-            nazark@sas.upenn.edu
-          </a>
-          &nbsp;|&nbsp; Population Studies Center, University of Pennsylvania
-        </p>
+      <!-- DOWNLOAD LINK -->
+      <div class="flex justify-end">
+        <a
+          href="NazarKhalid_resume_EPS.pdf"
+          download
+          class="text-sm text-blue-700 underline"
+        >
+          Download CV
+        </a>
       </div>
-    </section>
 
-    <!-- Embedded PDF -->
-    <section class="mt-10">
+      <!-- EMBEDDED CV PDF -->
       <div class="border border-gray-300 rounded-lg bg-gray-50 p-3">
         <iframe
           src="NazarKhalid_resume_EPS.pdf"
           title="Nazar Khalid CV"
           class="w-full rounded"
-          style="height:78vh; min-height:600px; border:0;">
-        </iframe>
+          style="height:78vh; min-height:600px; border:0;"
+        ></iframe>
       </div>
 
-      <p class="mt-3 text-xs text-gray-500">
-        If the PDF does not display, use the “Open in new tab” or “Download CV” links above.
-        On some mobile devices, the file may open in your device’s PDF viewer.
-      </p>
-    </section>
-
-    <!-- Selected Highlights -->
-    <section class="mt-10">
-      <h2 class="text-xl font-semibold text-gray-900">Selected highlights</h2>
-      <ul class="mt-3 list-disc pl-5 text-gray-700 space-y-2 text-sm">
-        <li>
-          Research on floods and education, sanitation, energy transitions, and measurement
-          of mental health and discrimination in low- and middle-income settings.
-        </li>
-        <li>
-          Recent presentations at PAA (2025), RC28 Shanghai (2024), and CIES (2024), among others.
-        </li>
-        <li>
-          Fellowships include the University of Pennsylvania Presidential Ph.D. Fellowship and
-          the Benjamin Franklin Fellowship.
-        </li>
-      </ul>
     </section>
 
   </main>
