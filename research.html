@@ -58,181 +58,459 @@
   <!-- MAIN -->
   <main class="max-w-6xl mx-auto px-4 py-12">
 
-    <h1 class="text-4xl font-semibold mb-2">Research Papers</h1>
+    <h1 class="text-4xl font-semibold mb-2">Research papers</h1>
     <div class="h-1 w-24 bg-blue-600 rounded"></div>
+    <p class="mt-4 text-gray-700 max-w-3xl">
+      Selected peer-reviewed publications. Click “Read more” to expand the abstract for each paper,
+      or follow the journal link to access the full article.
+    </p>
 
-    <div class="mt-10 space-y-10">
+    <div class="mt-10 space-y-8">
 
       <!-- CARD 1 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="floods-learning-losses.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="floods-learning-losses.jpg" class="card-img" alt="Floods and learning in rural India">
         </div>
-        <div class="p-6 md:col-span-2">
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
           <h2 class="font-semibold text-2xl">
             Floods, community infrastructure, and children’s learning losses in rural India
           </h2>
-          <p class="mt-3 text-gray-700">
-            Flood exposure reduces test scores, with smaller losses in villages with stronger local infrastructure.
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">Economics of Education Review</span>, 2025.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2025</p>
-          <a href="https://www.sciencedirect.com/science/article/pii/S0272775725000159" target="_blank" class="underline text-blue-700 mt-2 inline-block">Read paper</a>
+
+          <!-- short teaser -->
+          <p class="mt-3 text-gray-700">
+            Using panel data from rural India, this paper shows that flood exposure lowers children’s
+            test scores, but that robust local infrastructure substantially mitigates these learning losses.
+          </p>
+
+          <!-- full abstract -->
+          <div id="abs1-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              We link household and child-level survey data to fine-grained flood exposure measures
+              to study how environmental shocks shape learning in rural India. Exploiting variation
+              in flood incidence across villages and time, we estimate the association between flood
+              exposure and children’s math and reading scores. We then examine how these learning
+              losses vary with village-level infrastructure, including roads, markets, health centres,
+              and schools. The results show sizeable average losses in test scores following floods,
+              with markedly smaller declines in villages that have stronger physical and social
+              infrastructure, highlighting the importance of local capacity for buffering educational
+              impacts of climate shocks.
+            </p>
+          </div>
+
+          <!-- controls -->
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs1">
+              Read more
+            </button>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0272775725000159"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- CARD 2 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="fldf.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="fldf.jpg" class="card-img" alt="Floods and children’s education in rural India">
         </div>
-        <div class="p-6 md:col-span-2">
-          <h2 class="font-semibold text-2xl">Floods and children’s education in rural India</h2>
-          <p class="mt-3 text-gray-700">
-            Floods disrupt schooling more for marginalized students; recovery depends on resources.
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
+          <h2 class="font-semibold text-2xl">
+            Floods and children’s education in rural India
+          </h2>
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">RSF: The Russell Sage Foundation Journal of the Social Sciences</span>, 2024.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2024</p>
-          <a href="https://www.rsfjournal.org/content/10/1/230" target="_blank" class="underline text-blue-700">Read paper</a>
+
+          <p class="mt-3 text-gray-700">
+            This article examines how floods shape children’s grade progression and learning, and how
+            these effects differ by caste, religion, gender, and household resources.
+          </p>
+
+          <div id="abs2-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              Drawing on longitudinal data from rural India, we investigate whether flood exposure
+              disrupts school participation and learning trajectories, and whether these disruptions
+              are distributed unevenly across social groups. We estimate how grade-for-age, basic
+              literacy, and numeracy outcomes change following flood events, and test for
+              heterogeneity by caste, religion, gender, and socioeconomic status. The analysis
+              shows that floods depress school progress for all children but that socially
+              marginalized groups are disproportionately exposed. Conditional on exposure, learning
+              losses are not uniformly larger for marginalized children, suggesting that differential
+              exposure is a key driver of stratified educational outcomes.
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs2">
+              Read more
+            </button>
+            <a href="https://www.rsfjournal.org/content/10/1/230"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- CARD 3 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="gender_government_intervention_slow_LPG.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="gender_government_intervention_slow_LPG.jpg" class="card-img" alt="Gender, LPG adoption, and government intervention">
         </div>
-        <div class="p-6 md:col-span-2">
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
           <h2 class="font-semibold text-2xl">
             Gender, government intervention, and slow LPG adoption in rural north India
           </h2>
-          <p class="mt-3 text-gray-700">
-            Subsidies increased access but not sustained use; gender dynamics and refill costs matter.
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">World Development</span>, 2021.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2021</p>
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0305750X21002977" target="_blank" class="underline text-blue-700">Read paper</a>
+
+          <p class="mt-3 text-gray-700">
+            We study why subsidised LPG connections do not readily translate into sustained clean fuel
+            use, highlighting the role of refill affordability, supply reliability, and intra-household power.
+          </p>
+
+          <div id="abs3-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              Using survey and qualitative data from rural north India, this paper examines the
+              implementation and consequences of a major LPG subsidy programme. We document high
+              uptake of subsidised LPG connections but continued reliance on solid fuels for cooking.
+              Analyses show that refill costs, supply-side bottlenecks, and gendered control over
+              resources constrain sustained use of LPG. The findings suggest that clean energy
+              transitions require attention not only to connection access but also to recurring costs
+              and gendered decision-making within households.
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs3">
+              Read more
+            </button>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0305750X21002977"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- CARD 4 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="phone-survey-mental-health.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="phone-survey-mental-health.jpg" class="card-img" alt="Phone surveys and mental health measurement in India">
         </div>
-        <div class="p-6 md:col-span-2">
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
           <h2 class="font-semibold text-2xl">
             Measurement of population mental health: Survey methods and outcomes from India
           </h2>
-          <p class="mt-3 text-gray-700">
-            Evaluates phone survey feasibility and bias with recommendations for questionnaire design.
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">Health Policy and Planning</span>, 2021.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2021</p>
-          <a href="https://academic.oup.com/heapol/article/36/5/606/6163121" target="_blank" class="underline text-blue-700">Read paper</a>
+
+          <p class="mt-3 text-gray-700">
+            Evaluates the feasibility and biases of mental health measurement through phone surveys,
+            with guidance on instrument design in low-resource settings.
+          </p>
+
+          <div id="abs4-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              We assess how different modes and instruments perform in measuring population mental
+              health in India using large-scale phone surveys. The study compares symptom scales,
+              explores non-response and selection, and examines correlates of distress. Findings
+              highlight both the promise and pitfalls of remote mental health measurement and provide
+              practical recommendations for survey design in low- and middle-income contexts.
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs4">
+              Read more
+            </button>
+            <a href="https://academic.oup.com/heapol/article/36/5/606/6163121"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- CARD 5 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="st.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="st.jpg" class="card-img" alt="When women eat last: food and mental health">
         </div>
-        <div class="p-6 md:col-span-2">
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
           <h2 class="font-semibold text-2xl">
             When women eat last: Discrimination at home and women's mental health
           </h2>
-          <p class="mt-3 text-gray-700">
-            Food distribution norms correlate with worse mental health outcomes for women.
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">PLOS ONE</span>, 2021.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2021</p>
-          <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0247065" target="_blank" class="underline text-blue-700">Read paper</a>
+
+          <p class="mt-3 text-gray-700">
+            Links discriminatory food allocation within households to symptoms of psychological
+            distress among women in rural north India.
+          </p>
+
+          <div id="abs5-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              Using survey data from married women, this paper documents norms around intra-household
+              food distribution, focusing on the practice of women eating last. We relate these norms
+              to validated measures of mental health and find that women who consistently eat last
+              report worse psychological outcomes, even after accounting for socioeconomic and
+              demographic factors. The results underscore how everyday gendered practices can affect
+              mental wellbeing.
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs5">
+              Read more
+            </button>
+            <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0247065"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- CARD 6 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="persisting-prejudice.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="persisting-prejudice.jpg" class="card-img" alt="Persisting prejudice by caste and gender">
         </div>
-        <div class="p-6 md:col-span-2">
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
           <h2 class="font-semibold text-2xl">
             Persisting Prejudice: Measuring Attitudes and Outcomes by Caste and Gender
           </h2>
-          <p class="mt-3 text-gray-700">
-            Measures discriminatory attitudes and links them to social outcomes.
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">CASTE: A Global Journal on Social Exclusion</span>, 2020.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2020</p>
-          <a href="https://journals.library.brandeis.edu/index.php/caste/article/view/172"
-             target="_blank" class="underline text-blue-700">Read paper</a>
+
+          <p class="mt-3 text-gray-700">
+            Combines attitudinal and behavioural measures to document the persistence of caste and
+            gender prejudice in contemporary India.
+          </p>
+
+          <div id="abs6-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              We use survey experiments and attitudinal questions to measure explicit and implicit
+              prejudice by caste and gender. The study links these measures to reported behaviours
+              and outcomes, showing that discriminatory attitudes remain widespread and are
+              associated with tangible disadvantages for marginalised groups. The findings point to
+              the limits of legal reform in eroding social hierarchy.
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs6">
+              Read more
+            </button>
+            <a href="https://journals.library.brandeis.edu/index.php/caste/article/view/172"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- CARD 7 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="open-defecation-panel.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="open-defecation-panel.jpg" class="card-img" alt="Open defecation panel survey in rural north India">
         </div>
-        <div class="p-6 md:col-span-2">
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
           <h2 class="font-semibold text-2xl">
             Revisiting Open Defecation: Evidence from a Panel Survey in Rural North India, 2014–18
           </h2>
-          <p class="mt-3 text-gray-700">
-            Panel data show persistent open defecation despite policy efforts.
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">Economic and Political Weekly</span>, 2020.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2020</p>
-          <a href="https://www.epw.in/journal/2020/21/special-articles/revisiting-open-defecation.html"
-             target="_blank" class="underline text-blue-700">Read paper</a>
+
+          <p class="mt-3 text-gray-700">
+            Uses panel data to assess progress in reducing open defecation during the Swachh Bharat
+            Mission and documents persistent gaps.
+          </p>
+
+          <div id="abs7-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              This article follows households over four years to evaluate changes in toilet ownership
+              and open defecation in the context of a major rural sanitation campaign. Despite
+              increases in toilet coverage, many individuals continue to defecate in the open. We
+              explore reasons for non-use and show how social and cultural factors, alongside
+              programme implementation, shape sanitation behaviour.
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs7">
+              Read more
+            </button>
+            <a href="https://www.epw.in/journal/2020/21/special-articles/revisiting-open-defecation.html"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- CARD 8 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="solid-fuel-use.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="solid-fuel-use.jpg" class="card-img" alt="Solid fuel use in rural north India">
         </div>
-        <div class="p-6 md:col-span-2">
-          <h2 class="font-semibold text-2xl">Persistence of Solid Fuel Use in Rural North India</h2>
-          <p class="mt-3 text-gray-700">
-            Policy must address refill affordability and supply reliability.
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
+          <h2 class="font-semibold text-2xl">
+            Persistence of Solid Fuel Use in Rural North India
+          </h2>
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">Economic and Political Weekly</span>, 2020.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2020</p>
-          <a href="https://www.epw.in/journal/2020/3/special-articles/persistence-solid-fuel-use-rural-north-india.html"
-             target="_blank" class="underline text-blue-700">Read paper</a>
+
+          <p class="mt-3 text-gray-700">
+            Analyses why households continue to rely on solid fuels despite access to cleaner
+            alternatives, with implications for energy policy.
+          </p>
+
+          <div id="abs8-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              We study patterns of cooking fuel use in rural north India, focusing on households that
+              have access to LPG but continue to use wood or dung. The analysis highlights how fuel
+              stacking, affordability constraints, and supply interruptions contribute to the
+              persistence of solid fuel use, underscoring the need for policies that address both
+              access and sustained use.
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs8">
+              Read more
+            </button>
+            <a href="https://www.epw.in/journal/2020/3/special-articles/persistence-solid-fuel-use-rural-north-india.html"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- CARD 9 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="experiences_perceptions_discrimination_dalit_muslim.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="experiences_perceptions_discrimination_dalit_muslim.jpg" class="card-img" alt="Discrimination among Dalits and Muslims">
         </div>
-        <div class="p-6 md:col-span-2">
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
           <h2 class="font-semibold text-2xl">
             Experiences and Perceptions of Discrimination among Dalits and Muslims
           </h2>
-          <p class="mt-3 text-gray-700">
-            Documents everyday discrimination and mismatches between experience and reporting.
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">Economic and Political Weekly</span>, 2018.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2018</p>
-          <a href="https://www.epw.in/journal/2018/42/commentary/experiences-and-perceptions.html"
-             target="_blank" class="underline text-blue-700">Read paper</a>
+
+          <p class="mt-3 text-gray-700">
+            Documents everyday experiences of discrimination and contrasts them with how often such
+            experiences are reported and acknowledged.
+          </p>
+
+          <div id="abs9-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              Combining survey questions on everyday treatment with items on perceived discrimination,
+              this paper examines how Dalit and Muslim respondents in north India describe and label
+              their experiences. We show that discriminatory acts are common, but are not always
+              named as “discrimination,” revealing gaps between lived experience and reported
+              perceptions that matter for policy and politics.
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs9">
+              Read more
+            </button>
+            <a href="https://www.epw.in/journal/2018/42/commentary/experiences-and-perceptions.html"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- CARD 10 -->
-      <div class="card p-0 grid grid-cols-1 md:grid-cols-3">
-        <div class="h-64 md:h-full">
-          <img src="aadhaar-pds.jpg" class="card-img" alt="">
+      <article class="card grid grid-cols-1 md:grid-cols-3">
+        <div class="h-56 md:h-full bg-gray-100">
+          <img src="aadhaar-pds.jpg" class="card-img" alt="Aadhaar, biometric authentication, and PDS in Jharkhand">
         </div>
-        <div class="p-6 md:col-span-2">
+        <div class="p-6 md:col-span-2 flex flex-col h-full">
           <h2 class="font-semibold text-2xl">
             Aadhaar, Biometric Authentication and the PDS in Jharkhand
           </h2>
-          <p class="mt-3 text-gray-700">
-            Examines biometric authentication in food subsidy delivery and exclusion risks.
+          <p class="mt-1 text-sm text-gray-500">
+            <span class="font-medium">Economic and Political Weekly</span>, 2017.
           </p>
-          <p class="text-xs text-gray-500 mt-4">2017</p>
-          <a href="https://www.epw.in/journal/2017/50/special-articles/aadhaar-and-food-security-jharkhand.html"
-             target="_blank" class="underline text-blue-700">Read paper</a>
+
+          <p class="mt-3 text-gray-700">
+            Examines how biometric authentication affects access to subsidised food and highlights
+            risks of exclusion under Aadhaar-linked welfare delivery.
+          </p>
+
+          <div id="abs10-full" class="mt-2 text-gray-700 text-sm hidden">
+            <p>
+              We study the rollout of Aadhaar-based biometric authentication in the public
+              distribution system (PDS) in Jharkhand. Drawing on household survey data and field
+              interviews, the paper documents both reductions in some forms of leakage and new
+              barriers to access, including authentication failures and increased transaction costs
+              for poor households. The findings raise concerns about exclusion in technology-mediated
+              welfare systems.
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+                    class="text-sm text-blue-700 underline"
+                    data-abstract-toggle="abs10">
+              Read more
+            </button>
+            <a href="https://www.epw.in/journal/2017/50/special-articles/aadhaar-and-food-security-jharkhand.html"
+               target="_blank"
+               class="text-sm text-blue-700 underline">
+              Journal page
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
     </div>
   </main>
